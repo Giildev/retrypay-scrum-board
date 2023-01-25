@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./styles.css">
+  <title>Retrypay</title>
+</head>
+
+<body>
+  <div class="board">
+    <div class="board__new">
+      <button class="board__new--button">
+        <span class="material-symbols-outlined">
+          add
+        </span>
+      </button>
+      <span class="board__new--tooltip">Add new Task</span>
+    </div>
+    <!-- Section to render all columns and taks rendered from functions -->
+    <div class="board__container" />
+  </div>
+  <div class="modal__newTask">
+    <div class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <button class="modal__close-button">
+            <span class="material-symbols-outlined">
+              close
+            </span>
+          </button>
+        </div>
+        <!-- Modal section (hidden) to create a new task -->
+        <div class="modal__content--body">
+          <form class="modal__content--form">
+
+            <div class="modal__input-group">
+              <label for="title" class="modal__title-label">Title</label>
+              <input id="title" class="modal__title-input" type="text" placeholder="i.e: Schedule a call">
+            </div>
+            <div class="modal__input-group">
+              <label for="priority" class="modal__priority-label">Priority</label>
+              <select id="priority" class="modal__priority-select" name="priority">
+                <option value="" selected disabled hidden>Select Priority</option>
+                <option value="critical">Critical</option>
+                <option value="high">High</option>
+                <option value="regular">Regular</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="modal__input-group">
+              <label for="description" class="modal__description-label">Description</label>
+              <textarea id="description" class="modal__description-input"
+                placeholder="i.e: Discuss about task #123"></textarea>
+            </div>
+            <button class="modal__submit-button">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
